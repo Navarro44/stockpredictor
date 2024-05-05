@@ -1,0 +1,12 @@
+from sec_edgar_downloader import Downloader
+
+
+# Download to current working directory.
+# Must declare company name and email address to comply with SEC Edgar's
+# programmatic downloading fair access policy.
+# More info: https://www.sec.gov/os/webmaster-faq#code-support
+dl = Downloader("", "my.email@domain.com")
+
+# Get all 8-K filings for Apple after January 1, 2017 and before March 25, 2017
+dl.get("8-K", "AAPL", after="2017-01-01", before="2017-03-25")
+
